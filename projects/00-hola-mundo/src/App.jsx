@@ -1,44 +1,47 @@
 import './App.css'
-import { TwitterFollow } from './TwitterFollow.jsx'
-
-const list = [
-    {
-        imagen : 'midudev',
-        nombre : 'Alberto Guerreiro',
-        usuario : '@albertoguerreiro',
-        follow : true
-    },
-
-    {
-        imagen : 'midudev',
-        nombre : 'Alberto Guerreiro',
-        usuario : '@albertoguerreiro',
-        follow : false
-    },
-]
+import { TwitterFollows } from './TwitterFollows.jsx'
 
 export function App() {
 
-    return(
-        <>
+  const list = [
+    {
+      foto: 'Martin',
+      nombre : 'Martin Guerreiro',
+      usuario  : 'marting',
+    },
+    {
+      foto: 'Sol',
+      nombre : 'Sol Guerreiro',
+      usuario  : 'solg',
+    },
+    {
+      foto: 'Bel',
+      nombre : 'Bel Guerreiro',
+      usuario  : 'beleng',
+    },
+  ]
 
-            <div className='titulo'><h1>A quien seguir</h1></div>
+  return (
+    <>
+      <div className="container">
 
-            <div className='todo'>
-                {
-                    list.map(({ imagen, nombre, usuario, follow }) => (
-                        <TwitterFollow
-                        key={imagen}
-                        imagen = {imagen}
-                        nombre = {nombre}
-                        usuario={usuario}
-                        follow = {follow}
-                    >
-                        </TwitterFollow>
-                    ))
-                }
-            </div>
-        </>
-        
-    ) 
+        <div className="title"><h1>A quién seguir</h1></div>
+
+        {
+          list.map(({foto, nombre, usuario})=>(
+            <TwitterFollows
+            key={nombre}
+            foto={foto}
+            nombre={nombre}
+            usuario={usuario}
+            ></TwitterFollows>
+          ))
+        }
+      
+        <div className="buscar"> Mostrar mas</div>
+      
+      </div>
+      
+    </>
+  )
 }
