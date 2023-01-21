@@ -9,7 +9,6 @@ export function TwitterFollows({foto, nombre='messi',usuario='messi'}) {
     const click = ()=>{
         setIsFollowing(!follow)
     };
-
     
 
     return (
@@ -19,10 +18,7 @@ export function TwitterFollows({foto, nombre='messi',usuario='messi'}) {
                             <img className="perfil" src={`https://unavatar.io/${foto}`} />
                         </div>
                         <div className="text">
-                            <p>{nombre} 
-                            <img className="verf" src="../img/verificado.png" alt="" />
-                            </p>
-                            <p className="gris">@{usuario} </p>
+                            <p><a href={usuario}>{nombre}</a></p>
                         </div>
                     </div>
 

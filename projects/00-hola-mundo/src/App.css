@@ -5,6 +5,13 @@
   width: 340px;
 }
 
+.container2{
+  display: inline-block;
+  background-color: rgb(34, 41, 227);
+  border-radius: 10px;
+  width: 340px;
+}
+
 .card{
   display: flex;
   justify-content: space-between;
@@ -54,4 +61,17 @@ button{
 
 .gris{
   color: gray;
+}
+
+.negro{
+  margin-top: 20px;
+  background-color: rgb(40, 40, 40);
+  color: white;
+  border-radius: 0;
+}
+
+.azul{
+  margin-top: 20px;
+  background-color: blue;
+  border-radius: 0;
 }
